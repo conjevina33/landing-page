@@ -50,33 +50,6 @@ const description =
       </div>
     </section>
 
-    <section id="how-it-works" class="section">
-      <div class="container">
-        <div class="section-header">
-          <p class="eyebrow">How it works</p>
-          <h2 class="section-title">A simple process for small technical projects.</h2>
-          <p class="section-copy">
-            Clear scope matters as much as clean code. The goal is to agree on inputs, outputs, and delivery before
-            building.
-          </p>
-        </div>
-        <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-          {[
-            ["Send the problem", "Describe what you need and share example files, links, or screenshots."],
-            ["Scope and estimate", "You get a clear estimate, timeline, and expected output."],
-            ["Build and review", "First working version, feedback, corrections, and practical testing."],
-            ["Delivery", "Final files, deployment, documentation, or handoff."],
-          ].map(([title, copy], index) => (
-            <article class="card p-5">
-              <p class="font-mono text-sm text-cyan-300">0{index + 1}</p>
-              <h3 class="mt-3 text-xl font-bold text-white">{title}</h3>
-              <p class="mt-3 text-sm leading-6 text-slate-300">{copy}</p>
-            </article>
-          ))}
-        </div>
-      </div>
-    </section>
-
     <section id="what-i-need" class="section">
       <div class="container">
         <div class="section-header">
