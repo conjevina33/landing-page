@@ -1,0 +1,59 @@
+---
+interface Props {
+  title: string;
+  category: string;
+  problem: string;
+  solution: string;
+  href?: string;
+  previewImage?: string;
+  previewAlt?: string;
+  tech: string[];
+  result: string;
+}
+
+const { title, category, problem, solution, href, previewImage, previewAlt, tech, result } = Astro.props;
+const asset = (path: string) => `${import.meta.env.BASE_URL.replace(/\/$/, "")}/${path}`;
+---
+
+<article class="card p-5">
+  <div class="flex flex-wrap items-start justify-between gap-3">
+    <div>
+      <p class="font-mono text-xs uppercase text-cyan-300">{category}</p>
+      <h3 class="mt-2 text-2xl font-bold text-white">{title}</h3>
+    </div>
+    {href && (
+      <a class="button button-secondary min-h-10 px-3 text-sm" href={href} target="_blank" rel="noreferrer" aria-label={`Open ${title}`}>
+        Open
+      </a>
+    )}
+  </div>
+  {previewImage && (
+    <a
+      class="mt-5 block overflow-hidden rounded-lg border border-slate-700/80 bg-slate-950/70 transition duration-200 hover:border-cyan-300/60"
+      href={href}
+      target="_blank"
+      rel="noreferrer"
+      aria-label={`Open preview for ${title}`}
+    >
+      <img
+        class="aspect-video w-full object-cover object-top"
+        src={asset(previewImage)}
+        alt={previewAlt ?? `${title} preview`}
+        width="1440"
+        height="900"
+        loading="eager"
+        decoding="async"
+      />
+    </a>
+  )}
+  <div class="mt-4 grid gap-3 text-sm leading-6 text-slate-300">
+    <p><span class="font-semibold text-slate-100">Problem:</span> {problem}</p>
+    <p><span class="font-semibold text-slate-100">Solution:</span> {solution}</p>
+    <p class="rounded-lg border border-blue-400/16 bg-blue-400/6 p-3">
+      <span class="font-semibold text-cyan-100">Result:</span> {result}
+    </p>
+  </div>
+  <div class="mt-5 flex flex-wrap gap-2">
+    {tech.map((tag) => <span class="chip">{tag}</span>)}
+  </div>
+</article>

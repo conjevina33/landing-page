@@ -1,0 +1,137 @@
+---
+import Hero from "../components/Hero.astro";
+import ServiceCard from "../components/ServiceCard.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import ExperienceTimeline from "../components/ExperienceTimeline.astro";
+import SkillGroup from "../components/SkillGroup.astro";
+import ContactCTA from "../components/ContactCTA.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { services } from "../data/services";
+import { projects } from "../data/projects";
+import { skillGroups } from "../data/skills";
+
+const title = "Nemanja Filipović — Python, Automation & Web Development";
+const description =
+  "Technical consultant building business websites, Python data workflows, web scrapers, reconciliation tools, log analysis utilities, and automation systems.";
+---
+
+<BaseLayout title={title} description={description}>
+  <main>
+    <Hero />
+
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">Selected projects</p>
+          <h2 class="section-title">Plain examples, no inflated claims.</h2>
+          <p class="section-copy">
+            A mix of public work, private/client-style tooling, and non-confidential project descriptions.
+          </p>
+        </div>
+        <div class="grid gap-4 lg:grid-cols-2">
+          {projects.map((project) => <ProjectCard {...project} />)}
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">Services</p>
+          <h2 class="section-title">Project-based technical work that solves operational problems.</h2>
+          <p class="section-copy">
+            Websites, Python data processing, scraping, desktop utilities, reconciliation workflows, and support tools
+            built for clear outputs and maintainable handoff.
+          </p>
+        </div>
+        <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+          {services.map((service) => <ServiceCard {...service} />)}
+        </div>
+      </div>
+    </section>
+
+    <section id="how-it-works" class="section">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">How it works</p>
+          <h2 class="section-title">A simple process for small technical projects.</h2>
+          <p class="section-copy">
+            Clear scope matters as much as clean code. The goal is to agree on inputs, outputs, and delivery before
+            building.
+          </p>
+        </div>
+        <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+          {[
+            ["Send the problem", "Describe what you need and share example files, links, or screenshots."],
+            ["Scope and estimate", "You get a clear estimate, timeline, and expected output."],
+            ["Build and review", "First working version, feedback, corrections, and practical testing."],
+            ["Delivery", "Final files, deployment, documentation, or handoff."],
+          ].map(([title, copy], index) => (
+            <article class="card p-5">
+              <p class="font-mono text-sm text-cyan-300">0{index + 1}</p>
+              <h3 class="mt-3 text-xl font-bold text-white">{title}</h3>
+              <p class="mt-3 text-sm leading-6 text-slate-300">{copy}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section id="what-i-need" class="section">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">What I need from you</p>
+          <h2 class="section-title">Good inputs make the work faster.</h2>
+          <p class="section-copy">
+            You do not need a technical specification. A few examples and the desired output are usually enough to
+            start.
+          </p>
+        </div>
+        <div class="grid gap-4 lg:grid-cols-3">
+          {[
+            ["For data projects", "Sample Excel/CSV/PDF files, desired output, rules for matching or cleaning, and deadline."],
+            ["For websites", "Business name, logo/colors if available, pages needed, contact details, domain/hosting access."],
+            ["For scraping", "Source websites, fields needed, output format, frequency, and known limits."],
+          ].map(([title, copy]) => (
+            <article class="card p-5">
+              <h3 class="text-xl font-bold text-white">{title}</h3>
+              <p class="mt-3 text-sm leading-6 text-slate-300">{copy}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section id="strengths" class="section">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">Core stack</p>
+          <h2 class="section-title">What I work with.</h2>
+          <p class="section-copy">
+            The stack covers Python data tools, scraping, websites, production support, logs, and cloud workflows
+            without fake skill percentages.
+          </p>
+        </div>
+        <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+          {skillGroups.map((group) => <SkillGroup {...group} />)}
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">Production background</p>
+          <h2 class="section-title">Professional context behind the work.</h2>
+          <p class="section-copy">
+            Compact background only: cloud automation, SQL/.NET/Windows environments, support tooling, logs, and
+            data integrity.
+          </p>
+        </div>
+        <ExperienceTimeline />
+      </div>
+    </section>
+
+    <ContactCTA />
+  </main>
+</BaseLayout>

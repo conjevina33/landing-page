@@ -1,0 +1,17 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  skills: string[];
+}
+
+const { title, description, skills } = Astro.props;
+---
+
+<article class="card p-5 transition duration-200 hover:-translate-y-1 hover:border-cyan-300/40">
+  <h3 class="text-lg font-bold text-white">{title}</h3>
+  <p class="mt-2 text-sm leading-6 text-slate-300">{description}</p>
+  <div class="mt-4 flex flex-wrap gap-2">
+    {skills.map((skill) => <span class="chip">{skill}</span>)}
+  </div>
+</article>

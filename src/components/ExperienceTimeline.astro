@@ -1,0 +1,21 @@
+---
+import { experience } from "../data/experience";
+---
+
+<div class="grid gap-4">
+  {experience.slice(0, 3).map((item) => (
+    <article class="card p-5">
+      <div class="flex flex-wrap items-start justify-between gap-3">
+        <div>
+          <p class="font-mono text-xs uppercase text-cyan-300">{item.company}</p>
+          <h3 class="mt-2 text-xl font-bold text-white">{item.role}</h3>
+        </div>
+        <p class="rounded-full border border-slate-700 bg-slate-950/60 px-3 py-1 font-mono text-xs text-slate-400">{item.period}</p>
+      </div>
+      <p class="mt-4 text-sm leading-6 text-slate-300">{item.points.join(" ")}</p>
+    </article>
+  ))}
+  <a class="button button-secondary w-fit" href="https://www.linkedin.com/in/nemanja-filipović" target="_blank" rel="noreferrer">
+    View LinkedIn for full history
+  </a>
+</div>
