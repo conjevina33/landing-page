@@ -1,5 +1,10 @@
 ---
-import { profile } from "../data/profile";
+interface Props {
+  profile: any;
+  contact: any;
+}
+
+const { profile, contact } = Astro.props;
 ---
 
 <section id="contact" class="section">
@@ -7,18 +12,17 @@ import { profile } from "../data/profile";
     <div class="card overflow-hidden p-6 sm:p-8 lg:p-10">
       <div class="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
         <div>
-          <p class="eyebrow">Contact</p>
-          <h2 class="section-title">Have a practical software problem?</h2>
+          <p class="eyebrow">{contact.eyebrow}</p>
+          <h2 class="section-title">{contact.title}</h2>
           <p class="section-copy">
-            Send the task, example files or links, and the output you want. I will tell you what can be built,
-            how long it should take, and what the cleanest approach is.
+            {contact.copy}
           </p>
         </div>
         <div class="flex flex-col gap-3 sm:min-w-64">
-          <a class="button button-primary" href={profile.links.email}>Email me</a>
-          <a class="button button-secondary" href={profile.links.github} target="_blank" rel="noreferrer">GitHub</a>
-          <a class="button button-secondary" href={profile.links.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
-          <a class="button button-secondary" href={profile.links.codepen} target="_blank" rel="noreferrer">CodePen</a>
+          <a class="button button-primary" href={profile.links.email}>{contact.email}</a>
+          <a class="button button-secondary" href={profile.links.github} target="_blank" rel="noreferrer">{contact.github}</a>
+          <a class="button button-secondary" href={profile.links.linkedin} target="_blank" rel="noreferrer">{contact.linkedin}</a>
+          <a class="button button-secondary" href={profile.links.codepen} target="_blank" rel="noreferrer">{contact.codepen}</a>
         </div>
       </div>
     </div>

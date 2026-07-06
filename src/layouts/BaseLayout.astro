@@ -4,21 +4,22 @@ import "../styles/global.css";
 interface Props {
   title: string;
   description: string;
+  lang?: string;
 }
 
-const { title, description } = Astro.props;
+const { title, description, lang = "en" } = Astro.props;
 const asset = (path: string) => `${import.meta.env.BASE_URL.replace(/\/$/, "")}/${path}`;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
     <meta property="og:title" content={title} />
-    <meta property="og:description" content="Websites, Python automation, data processing, scraping, reconciliation tools, and log analysis utilities." />
+    <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <link rel="icon" type="image/svg+xml" href={asset("favicon.svg")} />
     <link rel="icon" href={asset("favicon.ico")} />

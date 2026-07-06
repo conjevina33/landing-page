@@ -1,5 +1,19 @@
 ---
-import { experience } from "../data/experience";
+interface Props {
+  experience: Array<{
+    company: string;
+    role: string;
+    period: string;
+    points: string[];
+  }>;
+  labels: {
+    currentRole: string;
+    linkedin: string;
+  };
+  linkedinUrl: string;
+}
+
+const { experience, labels, linkedinUrl } = Astro.props;
 ---
 
 <div class="relative">
@@ -38,7 +52,7 @@ import { experience } from "../data/experience";
 
               {isCurrent && (
                 <p class="mt-5 inline-flex rounded-full border border-emerald-300/30 bg-emerald-300/10 px-3 py-1 font-mono text-xs text-emerald-200">
-                  current role
+                  {labels.currentRole}
                 </p>
               )}
             </article>
@@ -48,7 +62,7 @@ import { experience } from "../data/experience";
     })}
   </ol>
 
-  <a class="button button-secondary mt-6 w-fit" href="https://www.linkedin.com/in/nemanja-filipović" target="_blank" rel="noreferrer">
-    View LinkedIn for full history
+  <a class="button button-secondary mt-6 w-fit" href={linkedinUrl} target="_blank" rel="noreferrer">
+    {labels.linkedin}
   </a>
 </div>

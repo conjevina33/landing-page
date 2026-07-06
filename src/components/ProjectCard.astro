@@ -9,9 +9,26 @@ interface Props {
   previewAlt?: string;
   tech: string[];
   result: string;
+  labels?: {
+    problem: string;
+    solution: string;
+    result: string;
+    open: string;
+  };
 }
 
-const { title, category, problem, solution, href, previewImage, previewAlt, tech, result } = Astro.props;
+const {
+  title,
+  category,
+  problem,
+  solution,
+  href,
+  previewImage,
+  previewAlt,
+  tech,
+  result,
+  labels = { problem: "Problem", solution: "Solution", result: "Result", open: "Open" },
+} = Astro.props;
 const asset = (path: string) => `${import.meta.env.BASE_URL.replace(/\/$/, "")}/${path}`;
 ---
 
@@ -22,8 +39,8 @@ const asset = (path: string) => `${import.meta.env.BASE_URL.replace(/\/$/, "")}/
       <h3 class="mt-2 text-2xl font-bold text-white">{title}</h3>
     </div>
     {href && (
-      <a class="button button-secondary min-h-10 px-3 text-sm" href={href} target="_blank" rel="noreferrer" aria-label={`Open ${title}`}>
-        Open
+      <a class="button button-secondary min-h-10 px-3 text-sm" href={href} target="_blank" rel="noreferrer" aria-label={`${labels.open} ${title}`}>
+        {labels.open}
       </a>
     )}
   </div>
@@ -33,7 +50,7 @@ const asset = (path: string) => `${import.meta.env.BASE_URL.replace(/\/$/, "")}/
       href={href}
       target="_blank"
       rel="noreferrer"
-      aria-label={`Open preview for ${title}`}
+      aria-label={`${labels.open} ${title}`}
     >
       <img
         class="aspect-video w-full object-cover object-top"
@@ -47,10 +64,10 @@ const asset = (path: string) => `${import.meta.env.BASE_URL.replace(/\/$/, "")}/
     </a>
   )}
   <div class="mt-4 grid gap-3 text-sm leading-6 text-slate-300">
-    <p><span class="font-semibold text-slate-100">Problem:</span> {problem}</p>
-    <p><span class="font-semibold text-slate-100">Solution:</span> {solution}</p>
+    <p><span class="font-semibold text-slate-100">{labels.problem}:</span> {problem}</p>
+    <p><span class="font-semibold text-slate-100">{labels.solution}:</span> {solution}</p>
     <p class="rounded-lg border border-blue-400/16 bg-blue-400/6 p-3">
-      <span class="font-semibold text-cyan-100">Result:</span> {result}
+      <span class="font-semibold text-cyan-100">{labels.result}:</span> {result}
     </p>
   </div>
   <div class="mt-5 flex flex-wrap gap-2">

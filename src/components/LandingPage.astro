@@ -1,0 +1,124 @@
+---
+import Hero from "./Hero.astro";
+import ServiceCard from "./ServiceCard.astro";
+import ProjectCard from "./ProjectCard.astro";
+import ExperienceTimeline from "./ExperienceTimeline.astro";
+import SkillGroup from "./SkillGroup.astro";
+import ContactCTA from "./ContactCTA.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+interface Props {
+  page: any;
+}
+
+const { page } = Astro.props;
+const labels = page.cardLabels;
+---
+
+<BaseLayout title={page.title} description={page.description} lang={page.lang}>
+  <main>
+    <Hero
+      profile={page.profile}
+      hero={page.hero}
+      nav={page.nav}
+      switchPath={page.switchPath}
+      switchLabel={page.switchLabel}
+    />
+
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">{page.sections.projects.eyebrow}</p>
+          <h2 class="section-title">{page.sections.projects.title}</h2>
+          <p class="section-copy">{page.sections.projects.copy}</p>
+        </div>
+        <div class="grid gap-4 lg:grid-cols-2">
+          {page.projects.map((project: any) => (
+            <ProjectCard
+              {...project}
+              labels={{
+                problem: labels.problem,
+                solution: labels.solution,
+                result: labels.result,
+                open: labels.open,
+              }}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">{page.sections.services.eyebrow}</p>
+          <h2 class="section-title">{page.sections.services.title}</h2>
+          <p class="section-copy">{page.sections.services.copy}</p>
+        </div>
+        <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+          {page.services.map((service: any) => (
+            <ServiceCard
+              {...service}
+              labels={{
+                problem: labels.problem,
+                build: labels.build,
+                output: labels.output,
+              }}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section id="what-i-need" class="section">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">{page.sections.needs.eyebrow}</p>
+          <h2 class="section-title">{page.sections.needs.title}</h2>
+          <p class="section-copy">{page.sections.needs.copy}</p>
+        </div>
+        <div class="grid gap-4 lg:grid-cols-3">
+          {page.needs.map((item: any) => (
+            <article class="card p-5">
+              <h3 class="text-xl font-bold text-white">{item.title}</h3>
+              <p class="mt-3 text-sm leading-6 text-slate-300">{item.copy}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section id="strengths" class="section">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">{page.sections.stack.eyebrow}</p>
+          <h2 class="section-title">{page.sections.stack.title}</h2>
+          <p class="section-copy">{page.sections.stack.copy}</p>
+        </div>
+        <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+          {page.skills.map((group: any) => <SkillGroup {...group} />)}
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">{page.sections.experience.eyebrow}</p>
+          <h2 class="section-title">{page.sections.experience.title}</h2>
+          <p class="section-copy">{page.sections.experience.copy}</p>
+        </div>
+        <ExperienceTimeline
+          experience={page.experience}
+          labels={{
+            currentRole: labels.currentRole,
+            linkedin: labels.linkedin,
+          }}
+          linkedinUrl={page.profile.links.linkedin}
+        />
+      </div>
+    </section>
+
+    <ContactCTA profile={page.profile} contact={page.contact} />
+  </main>
+</BaseLayout>

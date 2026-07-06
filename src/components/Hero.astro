@@ -1,16 +1,30 @@
 ---
-import { profile } from "../data/profile";
-
 const asset = (path: string) => `${import.meta.env.BASE_URL.replace(/\/$/, "")}/${path}`;
+
+interface Props {
+  profile: any;
+  hero: any;
+  nav: any;
+  switchPath: string;
+  switchLabel: string;
+}
+
+const { profile, hero, nav, switchPath, switchLabel } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+const localPath = (path: string) => `${base}${path === "/" ? "/" : path}`;
+const availabilityWords = hero.availability.split(" ");
+const availabilityLead = availabilityWords.slice(0, 4).join(" ");
+const availabilityRest = availabilityWords.slice(4).join(" ");
 ---
 
 <section class="relative overflow-hidden pb-16 pt-4 sm:pb-24 sm:pt-6">
   <div class="container">
     <header class="flex justify-end py-3 text-sm text-slate-200">
       <nav class="flex flex-wrap items-center gap-4 rounded-full border border-white/10 bg-slate-950/55 px-5 py-2 shadow-lg shadow-black/20 backdrop-blur-md" aria-label="Primary navigation">
-        <a class="hover:text-cyan-300" href="#services">Services</a>
-        <a class="hover:text-cyan-300" href="#projects">Projects</a>
-        <a class="hover:text-cyan-300" href="#contact">Contact</a>
+        <a class="hover:text-cyan-300" href="#services">{nav.services}</a>
+        <a class="hover:text-cyan-300" href="#projects">{nav.projects}</a>
+        <a class="hover:text-cyan-300" href="#contact">{nav.contact}</a>
+        <a class="rounded-full border border-cyan-300/30 px-2 py-0.5 font-bold text-cyan-200 hover:border-cyan-200 hover:text-white" href={localPath(switchPath)}>{switchLabel}</a>
       </nav>
     </header>
 
@@ -20,30 +34,28 @@ const asset = (path: string) => `${import.meta.env.BASE_URL.replace(/\/$/, "")}/
           <div class="absolute inset-0 bg-[radial-gradient(circle_at_52%_32%,rgba(34,211,238,0.16),transparent_30%),linear-gradient(90deg,rgba(8,13,22,0.98),rgba(8,13,22,0.78)_50%,rgba(8,13,22,0.98))]"></div>
           <div class="relative z-10 grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(260px,320px)] lg:items-center xl:grid-cols-[minmax(0,1fr)_320px_minmax(0,1fr)]">
             <div>
-              <p class="eyebrow">Available for practical project work</p>
+              <p class="eyebrow">{hero.eyebrow}</p>
               <h1 class="max-w-xl text-5xl font-black leading-[0.95] tracking-normal text-white sm:text-6xl xl:text-7xl">
                 {profile.name}
               </h1>
               <p class="mt-5 max-w-md text-2xl font-semibold leading-tight text-slate-100">
-                Python automation & web developer
+                {hero.role}
               </p>
               <p class="mt-4 max-w-md text-base leading-7 text-slate-300">
-                Websites, Python tools, and automation for real business problems.
+                {hero.short}
               </p>
               <div class="mt-8 flex flex-wrap gap-3">
-                <a class="button button-primary" href={profile.links.email} aria-label="Start a project with Nemanja Filipović">Start a project</a>
-                <a class="button button-secondary" href={profile.links.github} target="_blank" rel="noreferrer">View GitHub</a>
+                <a class="button button-primary" href={profile.links.email} aria-label={`${hero.primaryCta} - ${profile.name}`}>{hero.primaryCta}</a>
+                <a class="button button-secondary" href={profile.links.github} target="_blank" rel="noreferrer">{hero.githubCta}</a>
                 <a class="button button-secondary" href={profile.links.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
               </div>
               <div class="mt-6 flex flex-wrap gap-2 text-sm text-slate-400">
-                {profile.meta.map((item) => <span class="chip">{item}</span>)}
+                {profile.meta.map((item: string) => <span class="chip">{item}</span>)}
               </div>
               <div class="mt-6 grid gap-3 rounded-xl border border-white/12 bg-slate-950/76 p-4 shadow-xl backdrop-blur">
-                <p class="font-mono text-xs uppercase text-cyan-300">tools</p>
+                <p class="font-mono text-xs uppercase text-cyan-300">{hero.toolsLabel}</p>
                 <div class="flex flex-wrap gap-2">
-                  <span class="chip">python</span>
-                  <span class="chip">scraping</span>
-                  <span class="chip">troubleshooting</span>
+                  {hero.tools.map((tool: string) => <span class="chip">{tool}</span>)}
                 </div>
               </div>
             </div>
@@ -53,7 +65,7 @@ const asset = (path: string) => `${import.meta.env.BASE_URL.replace(/\/$/, "")}/
               <img
                 class="relative z-10 aspect-[4/5] h-full w-full object-cover object-[50%_20%]"
                 src={asset("images/nemanja-caricature.png")}
-                alt="Illustrated portrait of Nemanja Filipović"
+                alt={hero.imageAlt}
                 width="1366"
                 height="1536"
                 loading="eager"
@@ -64,7 +76,7 @@ const asset = (path: string) => `${import.meta.env.BASE_URL.replace(/\/$/, "")}/
 
             <div class="max-w-none lg:col-span-2 xl:col-span-1 xl:ml-auto xl:max-w-sm">
               <p class="text-2xl font-bold leading-tight text-white sm:text-3xl lg:max-w-3xl xl:max-w-none">
-                <span class="text-cyan-300">Available for freelance/project work</span> across business websites, Python tools, and data workflows.
+                <span class="text-cyan-300">{availabilityLead}</span>{availabilityRest && ` ${availabilityRest}`}
               </p>
               <p class="mt-5 text-base leading-7 text-slate-300 lg:max-w-3xl xl:max-w-none">
                 {profile.intro}
@@ -77,7 +89,7 @@ const asset = (path: string) => `${import.meta.env.BASE_URL.replace(/\/$/, "")}/
         </div>
 
         <div class="grid grid-cols-2 gap-2 bg-blue-500 px-5 py-4 text-center text-sm font-black text-white sm:flex sm:flex-wrap sm:items-center sm:justify-center sm:gap-x-6 sm:gap-y-3 lg:flex-nowrap lg:gap-x-5 lg:text-[0.82rem] xl:gap-x-8 xl:text-sm">
-          {profile.proof.map((item) => <span class="tracking-normal">{item}</span>)}
+          {profile.proof.map((item: string) => <span class="tracking-normal">{item}</span>)}
         </div>
       </div>
     </div>
