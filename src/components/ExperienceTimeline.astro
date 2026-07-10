@@ -17,24 +17,23 @@ const { experience, labels, linkedinUrl } = Astro.props;
 ---
 
 <div class="relative">
-  <div class="absolute bottom-8 left-4 top-6 w-px bg-gradient-to-b from-cyan-300 via-blue-500/45 to-transparent md:left-1/2"></div>
+  <div class="absolute bottom-8 left-4 top-6 w-px bg-gradient-to-b from-cyan-300 via-blue-500/45 to-transparent"></div>
 
   <ol class="grid gap-6">
     {experience.map((item, index) => {
       const isCurrent = index === 0;
-      const isLeft = index % 2 === 0;
 
       return (
-        <li class="group relative grid pl-11 md:grid-cols-2 md:pl-0">
-          <span class="absolute left-4 top-7 z-20 h-4 w-4 -translate-x-1/2 rounded-full border-2 border-cyan-200 bg-slate-950 shadow-[0_0_0_7px_rgba(7,11,16,0.96),0_0_24px_rgba(34,211,238,0.42)] transition duration-200 group-hover:scale-125 group-hover:bg-cyan-300 md:left-1/2"></span>
-          <span class={`absolute top-[34px] hidden h-px bg-gradient-to-r from-cyan-300/80 to-blue-500/10 transition duration-200 group-hover:from-cyan-200 md:block ${isLeft ? "left-[calc(50%-3rem)] right-1/2" : "left-1/2 right-[calc(50%-3rem)]"}`}></span>
+        <li class="group relative grid pl-11">
+          <span class="absolute left-4 top-7 z-20 h-4 w-4 -translate-x-1/2 rounded-full border-2 border-cyan-200 bg-slate-950 shadow-[0_0_0_7px_rgba(7,11,16,0.96),0_0_24px_rgba(34,211,238,0.42)] transition duration-200 group-hover:scale-125 group-hover:bg-cyan-300"></span>
+          <span class="absolute left-4 top-[34px] hidden h-px w-10 bg-gradient-to-r from-cyan-300/80 to-blue-500/10 transition duration-200 group-hover:from-cyan-200 md:block"></span>
 
-          <div class={isLeft ? "md:pr-12" : "md:col-start-2 md:pl-12"}>
-            <article class={`card p-5 transition duration-200 group-hover:-translate-y-1 group-hover:border-cyan-300/50 ${isLeft ? "md:text-right" : ""}`}>
-              <div class={`flex flex-wrap items-start gap-3 ${isLeft ? "md:justify-between" : "justify-between"}`}>
-                <div class={isLeft ? "md:order-2" : ""}>
+          <div>
+            <article class="card p-5 transition duration-200 group-hover:-translate-y-1 group-hover:border-cyan-300/50">
+              <div class="flex flex-wrap items-start justify-between gap-3">
+                <div>
                   <p class="font-mono text-xs uppercase text-cyan-300">{item.company}</p>
-                  <h3 class="mt-2 text-xl font-bold text-white">{item.role}</h3>
+                  <h3 class="mt-2 text-xl font-bold text-white sm:whitespace-nowrap">{item.role}</h3>
                 </div>
                 <p class={`rounded-full border px-3 py-1 font-mono text-xs ${isCurrent ? "border-cyan-300/45 bg-cyan-300/10 text-cyan-100" : "border-slate-700 bg-slate-950/60 text-slate-400"}`}>
                   {item.period}
@@ -43,8 +42,8 @@ const { experience, labels, linkedinUrl } = Astro.props;
 
               <ul class="mt-4 grid gap-2 text-sm leading-6 text-slate-300">
                 {item.points.map((point) => (
-                  <li class={`relative ${isLeft ? "pl-4 md:pl-0 md:pr-4" : "pl-4"}`}>
-                    <span class={`absolute top-2 h-1.5 w-1.5 rounded-full bg-cyan-300/70 ${isLeft ? "left-0 md:left-auto md:right-0" : "left-0"}`}></span>
+                  <li class="relative pl-4">
+                    <span class="absolute left-0 top-2 h-1.5 w-1.5 rounded-full bg-cyan-300/70"></span>
                     {point}
                   </li>
                 ))}
