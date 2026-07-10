@@ -28,7 +28,6 @@ export const content = {
       credibility:
         "Production experience across cloud automation, data integrity, support tooling, SQL Server, Windows systems, logs, and incident troubleshooting.",
       links,
-      meta: ["Automation / Web"],
       proof: [
         "Python",
         "Web scraping",
@@ -46,9 +45,7 @@ export const content = {
       role: "Python automation & web developer",
       short: "Websites, Python tools, and automation for real business problems.",
       primaryCta: "Start a project",
-      githubCta: "View GitHub",
-      toolsLabel: "Tools",
-      tools: ["python", "scraping", "troubleshooting"],
+      githubCta: "GitHub",
       availability:
         "Available for freelance/project work across business websites, Python tools, and data workflows.",
       imageAlt: "Illustrated portrait of Nemanja Filipović",
@@ -156,11 +153,13 @@ export const content = {
         title: "LogDashboard",
         category: "Support tooling / log analysis",
         href: "https://github.com/NemanjaNecke/LogDashboard",
-        problem: "Production troubleshooting gets slower when logs are hard to search and inspect.",
+        problem:
+          "Log analysis often requires switching between IIS logs, Windows EVTX files, and custom application logs.",
         solution:
-          "Custom log viewer for filtering, searching, and reviewing operational log data more efficiently.",
+          "Modular PyQt5 desktop application with a dark qdarkstyle UI for viewing, analyzing, and comparing IIS, EVTX, and generic customer logs in one interface.",
         tech: ["Support tooling", "Logs", "Troubleshooting"],
-        result: "Less manual log inspection during support and incident work.",
+        result:
+          "Includes selectable modules at startup, timeline navigation, database management, debug log dock, IIS analysis, Excel reports, report comparison, and detailed statistics.",
       },
       {
         title: "Report reconciliation tool",
@@ -342,7 +341,6 @@ export const content = {
       credibility:
         "Produkcijsko iskustvo u cloud automatizaciji, integritetu podataka, support alatima, SQL Serveru, Windows sistemima, logovima i incident troubleshooting-u.",
       links,
-      meta: ["Automatizacija / Web"],
       proof: [
         "Python",
         "Web scraping",
@@ -360,9 +358,7 @@ export const content = {
       role: "Python automatizacija & web developer",
       short: "Sajtovi, Python alati i automatizacija za stvarne poslovne probleme.",
       primaryCta: "Pokreni projekat",
-      githubCta: "Pogledaj GitHub",
-      toolsLabel: "Alati",
-      tools: ["python", "scraping", "troubleshooting"],
+      githubCta: "GitHub",
       availability:
         "Dostupan za freelance/projektni rad: poslovni sajtovi, Python alati i data workflow-i.",
       imageAlt: "Ilustrovani portret Nemanje Filipovića",
@@ -470,11 +466,13 @@ export const content = {
         title: "LogDashboard",
         category: "Support tooling / log analiza",
         href: "https://github.com/NemanjaNecke/LogDashboard",
-        problem: "Produkcijski troubleshooting je sporiji kada se logovi teško pretražuju i pregledaju.",
+        problem:
+          "Analiza logova često zahteva rad sa IIS logovima, Windows EVTX fajlovima i custom application logovima u odvojenim alatima.",
         solution:
-          "Custom log viewer za filtriranje, pretragu i efikasniji pregled operativnih log podataka.",
+          "Modularna PyQt5 desktop aplikacija sa tamnim qdarkstyle UI-jem za pregled, analizu i poređenje IIS, EVTX i generic customer logova u jednom interfejsu.",
         tech: ["Support tooling", "Logovi", "Troubleshooting"],
-        result: "Manje ručnog pregleda logova tokom support i incident rada.",
+        result:
+          "Uključuje izbor modula pri pokretanju, timeline navigaciju, database manager, debug log dock, IIS analizu, Excel izveštaje, poređenje reportova i detaljnu statistiku.",
       },
       {
         title: "Report reconciliation tool",

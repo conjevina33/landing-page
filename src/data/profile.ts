@@ -15,7 +15,6 @@ export const profile = {
     codepen: "https://codepen.io/nemanjanecke",
     email: "mailto:n.filkic@gmail.com",
   },
-  meta: ["Automation / Web"],
   proof: [
     "Python",
     "Web scraping",
