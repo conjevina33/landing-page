@@ -44,7 +44,7 @@ const asset = (path: string) => `${import.meta.env.BASE_URL.replace(/\/$/, "")}/
       </a>
     )}
   </div>
-  {previewImage && (
+  {previewImage && href && (
     <a
       class="mt-5 block overflow-hidden rounded-lg border border-slate-700/80 bg-slate-950/70 transition duration-200 hover:border-cyan-300/60"
       href={href}
@@ -62,6 +62,19 @@ const asset = (path: string) => `${import.meta.env.BASE_URL.replace(/\/$/, "")}/
         decoding="async"
       />
     </a>
+  )}
+  {previewImage && !href && (
+    <div class="mt-5 overflow-hidden rounded-lg border border-slate-700/80 bg-slate-950/70">
+      <img
+        class="aspect-video w-full object-cover object-top"
+        src={asset(previewImage)}
+        alt={previewAlt ?? `${title} preview`}
+        width="1440"
+        height="900"
+        loading="eager"
+        decoding="async"
+      />
+    </div>
   )}
   <div class="mt-4 grid gap-3 text-sm leading-6 text-slate-300">
     <p><span class="font-semibold text-slate-100">{labels.problem}:</span> {problem}</p>

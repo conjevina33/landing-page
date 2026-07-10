@@ -150,6 +150,19 @@ export const content = {
         result: "A practical landing page foundation for business visibility and direct contact.",
       },
       {
+        title: "Chess Dashboard",
+        category: "Data dashboard / chess analytics",
+        previewImage: "images/chess-dashboard-preview.svg",
+        previewAlt: "Preview of the Chess Dashboard local chess prep interface",
+        problem:
+          "Chess game history is hard to review manually when performance, openings, time controls, rating changes, and preparation targets are spread across raw game data.",
+        solution:
+          "Interactive chess analytics dashboard for imported games with overview metrics, opening distribution, rating trend, result distribution, games by month, time-control splits, color splits, opponent strength, and time-of-day performance.",
+        tech: ["Python", "Dashboards", "Analytics", "Chess data"],
+        result:
+          "Demo view shows game profiling, AI-assisted scouting, individual game analysis, preparation targets, clock report generation, and AI plans for game prep, improvement, and tactics.",
+      },
+      {
         title: "LogDashboard",
         category: "Support tooling / log analysis",
         href: "https://github.com/NemanjaNecke/LogDashboard",
@@ -461,6 +474,19 @@ export const content = {
           "Postavka poslovnog sajta sa responsive layoutom, jasnim kontakt putem, custom domenom i Vercel deployment workflow-om.",
         tech: ["Astro", "Vercel", "DNS"],
         result: "Praktična landing page osnova za vidljivost biznisa i direktan kontakt.",
+      },
+      {
+        title: "Chess Dashboard",
+        category: "Data dashboard / chess analytics",
+        previewImage: "images/chess-dashboard-preview.svg",
+        previewAlt: "Preview Chess Dashboard lokalnog chess prep interfejsa",
+        problem:
+          "Istoriju šahovskih partija je teško ručno analizirati kada su performanse, otvaranja, time controls, rating promene i pripremni ciljevi razdvojeni u raw game podacima.",
+        solution:
+          "Interaktivni chess analytics dashboard za importovane partije sa overview metrikama, opening distribution, rating trendom, result distribution grafikom, games-by-month prikazom, time-control splitom, color splitom, jačinom protivnika i time-of-day performansama.",
+        tech: ["Python", "Dashboards", "Analytics", "Chess data"],
+        result:
+          "Demo prikaz pokriva profilisanje partija, AI-assisted scouting, analizu pojedinačnih partija, preparation targets, clock report generation i AI planove za game prep, improvement i tactics.",
       },
       {
         title: "LogDashboard",
