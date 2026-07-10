@@ -10,7 +10,7 @@ export const content = {
     lang: "en",
     path: "/",
     switchPath: "/sr/",
-    switchLabel: "SR",
+    switchLabel: "🇷🇸",
     title: "Nemanja Filipović — Python, Automation & Web Development",
     description:
       "Technical consultant building business websites, Python data workflows, web scrapers, reconciliation tools, log analysis utilities, and automation systems.",
@@ -323,7 +323,7 @@ export const content = {
     lang: "sr",
     path: "/sr/",
     switchPath: "/",
-    switchLabel: "EN",
+    switchLabel: "🇬🇧",
     title: "Nemanja Filipović — Python, automatizacija i web razvoj",
     description:
       "Tehnički konsultant koji pravi poslovne sajtove, Python data workflow-e, web scrapere, alate za usklađivanje izveštaja, log analizu i automatizaciju.",
@@ -376,8 +376,8 @@ export const content = {
       },
       needs: {
         eyebrow: "Šta mi treba od tebe",
-        title: "Dobri ulazi ubrzavaju posao.",
-        copy: "Ne treba ti tehnička specifikacija. Nekoliko primera i željeni izlaz su najčešće dovoljni za početak.",
+        title: "Dobri inputi ubrzavaju posao.",
+        copy: "Ne treba ti tehnička specifikacija. Dovoljno je nekoliko primera, šta trenutno imaš i kakav rezultat želiš.",
       },
       stack: {
         eyebrow: "Core stack",
@@ -403,15 +403,15 @@ export const content = {
     needs: [
       {
         title: "Za data projekte",
-        copy: "Primeri Excel/CSV/PDF fajlova, željeni izlaz, pravila za matching/čišćenje i rok.",
+        copy: "Primeri Excel/CSV/PDF fajlova, pravila za matching ili čišćenje, željeni format rezultata i rok.",
       },
       {
         title: "Za sajtove",
-        copy: "Naziv biznisa, logo/boje ako postoje, potrebne stranice, kontakt podaci, pristup domenu/hostingu.",
+        copy: "Naziv biznisa, logo i boje ako postoje, potrebne sekcije, kontakt podaci i pristup domenu ili hostingu.",
       },
       {
-        title: "Za scraping",
-        copy: "Izvorni sajtovi, potrebna polja, format izlaza, učestalost i poznata ograničenja.",
+        title: "Za web scraping",
+        copy: "Linkovi ka izvorima, podaci koje treba prikupiti, format rezultata, učestalost i poznata ograničenja.",
       },
     ],
     services: [
