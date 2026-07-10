@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" role="img" aria-label="Chess Dashboard preview">
+  <rect width="1440" height="900" fill="#0b111d"/>
+  <rect x="16" y="18" width="1408" height="62" rx="8" fill="#151b29" stroke="#334155"/>
+  <text x="30" y="42" fill="#ff64b4" font-family="Arial, sans-serif" font-size="13" font-weight="700">LOCAL CHESS PREP</text>
+  <text x="30" y="64" fill="#f8fafc" font-family="Arial, sans-serif" font-size="16">Turn your own games into a prep plan before the round starts.</text>
+  <g fill="#0a0f1a" stroke="#334155" font-family="Arial, sans-serif" font-size="12" font-weight="700">
+    <rect x="745" y="32" width="108" height="32" rx="16"/><text x="764" y="52" fill="#dbeafe">IMPORT &amp; DATA</text>
+    <rect x="862" y="32" width="66" height="32" rx="16"/><text x="879" y="52" fill="#dbeafe">GAMES</text>
+    <rect x="936" y="32" width="84" height="32" rx="16"/><text x="955" y="52" fill="#dbeafe">OVERVIEW</text>
+    <rect x="1028" y="32" width="104" height="32" rx="16"/><text x="1047" y="52" fill="#dbeafe">PERFORMANCE</text>
+    <rect x="1140" y="32" width="84" height="32" rx="16"/><text x="1159" y="52" fill="#dbeafe">OPENINGS</text>
+    <rect x="1232" y="32" width="90" height="32" rx="16"/><text x="1251" y="52" fill="#dbeafe">SCOUTING</text>
+  </g>
+  <rect x="16" y="100" width="1408" height="312" rx="24" fill="#151b29" stroke="#334155"/>
+  <text x="34" y="130" fill="#ff64b4" font-family="Arial, sans-serif" font-size="13" font-weight="700">HERO</text>
+  <text x="34" y="166" fill="#f8fafc" font-family="Arial, sans-serif" font-size="24" font-weight="800">See what opponents repeat, where your results slip, and what to review next.</text>
+  <text x="34" y="206" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="16">Import your games once, keep them local, and move from analysis to scouting without</text>
+  <text x="34" y="236" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="16">rebuilding the same work. The app is built for opponent preparation first.</text>
+  <rect x="34" y="262" width="715" height="88" rx="12" fill="#090e17" stroke="#334155"/>
+  <text x="50" y="284" fill="#dbeafe" font-family="Arial, sans-serif" font-size="12" font-weight="700">LOCAL ARCHIVE READY</text>
+  <text x="50" y="316" fill="#f8fafc" font-family="Arial, sans-serif" font-size="24" font-weight="800">123 games</text>
+  <text x="50" y="340" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="14">Imported library feeds analysis, scouting, and AI plans from the same dataset.</text>
+  <rect x="762" y="176" width="633" height="154" rx="16" fill="#090e17" stroke="#334155"/>
+  <g transform="translate(778 190)">
+    <rect width="124" height="124" rx="4" fill="#f4d2a4"/>
+    <g fill="#8d5c3a">
+      <rect x="15.5" y="0" width="15.5" height="15.5"/><rect x="46.5" y="0" width="15.5" height="15.5"/><rect x="77.5" y="0" width="15.5" height="15.5"/><rect x="108.5" y="0" width="15.5" height="15.5"/>
+      <rect x="0" y="15.5" width="15.5" height="15.5"/><rect x="31" y="15.5" width="15.5" height="15.5"/><rect x="62" y="15.5" width="15.5" height="15.5"/><rect x="93" y="15.5" width="15.5" height="15.5"/>
+      <rect x="15.5" y="31" width="15.5" height="15.5"/><rect x="46.5" y="31" width="15.5" height="15.5"/><rect x="77.5" y="31" width="15.5" height="15.5"/><rect x="108.5" y="31" width="15.5" height="15.5"/>
+      <rect x="0" y="46.5" width="15.5" height="15.5"/><rect x="31" y="46.5" width="15.5" height="15.5"/><rect x="62" y="46.5" width="15.5" height="15.5"/><rect x="93" y="46.5" width="15.5" height="15.5"/>
+      <rect x="15.5" y="62" width="15.5" height="15.5"/><rect x="46.5" y="62" width="15.5" height="15.5"/><rect x="77.5" y="62" width="15.5" height="15.5"/><rect x="108.5" y="62" width="15.5" height="15.5"/>
+      <rect x="0" y="77.5" width="15.5" height="15.5"/><rect x="31" y="77.5" width="15.5" height="15.5"/><rect x="62" y="77.5" width="15.5" height="15.5"/><rect x="93" y="77.5" width="15.5" height="15.5"/>
+      <rect x="15.5" y="93" width="15.5" height="15.5"/><rect x="46.5" y="93" width="15.5" height="15.5"/><rect x="77.5" y="93" width="15.5" height="15.5"/><rect x="108.5" y="93" width="15.5" height="15.5"/>
+      <rect x="0" y="108.5" width="15.5" height="15.5"/><rect x="31" y="108.5" width="15.5" height="15.5"/><rect x="62" y="108.5" width="15.5" height="15.5"/><rect x="93" y="108.5" width="15.5" height="15.5"/>
+    </g>
+    <circle cx="68" cy="47" r="5" fill="#67e8f9"/><circle cx="68" cy="62" r="5" fill="#67e8f9"/><circle cx="68" cy="78" r="5" fill="#67e8f9"/>
+  </g>
+  <rect x="914" y="188" width="462" height="94" rx="10" fill="#151b29" stroke="#334155"/>
+  <text x="928" y="210" fill="#dbeafe" font-family="Arial, sans-serif" font-size="12" font-weight="700">CURRENT MOVE</text>
+  <text x="928" y="236" fill="#f8fafc" font-family="Arial, sans-serif" font-size="22" font-weight="800">12...Nf6</text>
+  <text x="928" y="260" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="13">Review the position, add a branch, or compare the opening reference.</text>
+  <g fill="#151b29" stroke="#334155" font-family="Arial, sans-serif" font-size="14" font-weight="700">
+    <rect x="762" y="344" width="210" height="52" rx="8"/><text x="778" y="374" fill="#f8fafc">Plays Sicilian Defense 68%</text>
+    <rect x="982" y="344" width="210" height="52" rx="8"/><text x="998" y="374" fill="#f8fafc">Win rate drops vs aggressive</text>
+    <rect x="1202" y="344" width="192" height="52" rx="8"/><text x="1218" y="374" fill="#f8fafc">Blunders rise late</text>
+  </g>
+  <rect x="16" y="428" width="1408" height="210" rx="24" fill="#151b29" stroke="#334155"/>
+  <text x="34" y="458" fill="#ff64b4" font-family="Arial, sans-serif" font-size="13" font-weight="700">HOW IT WORKS</text>
+  <text x="34" y="492" fill="#f8fafc" font-family="Arial, sans-serif" font-size="24" font-weight="800">Three steps from archive to game plan.</text>
+  <g font-family="Arial, sans-serif">
+    <rect x="34" y="512" width="448" height="116" rx="10" fill="#090e17" stroke="#334155"/>
+    <circle cx="64" cy="544" r="15" fill="#5b314d"/><text x="60" y="549" fill="#fff" font-size="13" font-weight="700">1</text>
+    <text x="90" y="550" fill="#f8fafc" font-size="16" font-weight="800">Import one archive</text>
+    <text x="50" y="586" fill="#cbd5e1" font-size="13">Bring in PGN, Chess.com, or Lichess games and keep the full library local.</text>
+    <rect x="494" y="512" width="448" height="116" rx="10" fill="#090e17" stroke="#334155"/>
+    <circle cx="524" cy="544" r="15" fill="#5b314d"/><text x="520" y="549" fill="#fff" font-size="13" font-weight="700">2</text>
+    <text x="550" y="550" fill="#f8fafc" font-size="16" font-weight="800">Review key positions</text>
+    <text x="510" y="586" fill="#cbd5e1" font-size="13">Use one board-centered workspace for notation, branches, and engine review.</text>
+    <rect x="954" y="512" width="448" height="116" rx="10" fill="#090e17" stroke="#334155"/>
+    <circle cx="984" cy="544" r="15" fill="#5b314d"/><text x="980" y="549" fill="#fff" font-size="13" font-weight="700">3</text>
+    <text x="1010" y="550" fill="#f8fafc" font-size="16" font-weight="800">Switch to preparation</text>
+    <text x="970" y="586" fill="#cbd5e1" font-size="13">Turn the same games into opponent prep, priorities, and tactics training.</text>
+  </g>
+  <rect x="0" y="674" width="1440" height="226" fill="#111827"/>
+  <text x="34" y="718" fill="#f8fafc" font-family="Arial, sans-serif" font-size="22" font-weight="800">Scouting snapshot</text>
+  <g fill="#090e17" stroke="#334155" font-family="Arial, sans-serif" font-size="14">
+    <rect x="34" y="746" width="420" height="52" rx="10"/><text x="52" y="778" fill="#f8fafc">123 filtered games with 42% score and high confidence.</text>
+    <rect x="470" y="746" width="420" height="52" rx="10"/><text x="488" y="778" fill="#f8fafc">Most common opening: Kings Knight Variation.</text>
+    <rect x="906" y="746" width="420" height="52" rx="10"/><text x="924" y="778" fill="#f8fafc">Rapid is the strongest time-control split.</text>
+    <rect x="34" y="812" width="420" height="52" rx="10"/><text x="52" y="844" fill="#f8fafc">Weaknesses: rated 100+ higher and night games.</text>
+    <rect x="470" y="812" width="420" height="52" rx="10"/><text x="488" y="844" fill="#f8fafc">AI plans: game prep, improvement, tactics.</text>
+  </g>
+</svg>
